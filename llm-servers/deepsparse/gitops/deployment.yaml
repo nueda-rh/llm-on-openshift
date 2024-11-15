@@ -24,10 +24,10 @@ spec:
         - resources:
             limits:
               cpu: '8'
-              memory: 8Gi
+              memory: 64Gi
             requests:
               cpu: '4'
-              memory: 4Gi
+              memory: 32Gi
           terminationMessagePath: /dev/termination-log
           name: server
           env:
@@ -62,7 +62,7 @@ spec:
         - name: shm
           emptyDir:
             medium: Memory
-            sizeLimit: 1Gi
+            sizeLimit: 16Gi
         - name: models-cache
           persistentVolumeClaim:
             claimName: models-volume
