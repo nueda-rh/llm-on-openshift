@@ -37,7 +37,7 @@ spec:
             "--integration", "openai",
             "--port", "8080",
             "--task", "text_generation",
-            "--model_path", "zoo:mistral-7b-ultrachat200k_mistral_pretrain-pruned50"]
+            "--model_path", "zoo:mistral-7b-ultrachat200k_mistral_pretrain-pruned50_quantized"]
           securityContext:
             capabilities:
               drop:
