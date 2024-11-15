@@ -23,11 +23,11 @@ spec:
       containers:
         - resources:
             limits:
-              cpu: '2'
-              memory: 8Gi
+              cpu: '8'
+              memory: 16Gi
             requests:
-              cpu: '1'
-              memory: 4Gi
+              cpu: '4'
+              memory: 8Gi
           terminationMessagePath: /dev/termination-log
           name: server
           env:
@@ -37,7 +37,7 @@ spec:
             "--integration", "openai",
             "--port", "8080",
             "--task", "text_generation",
-            "--model_path", "hf:nm-testing/granite-7b-lab-pruned50-quant-ds"]
+            "--model_path", "zoo:llama2-7b-llama2_chat_llama2_pretrain-base_quantized"]
           securityContext:
             capabilities:
               drop:
